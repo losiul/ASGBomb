@@ -12,8 +12,8 @@
     <string name="main_defuse_code">Defuse Code:</string>
     <string name="main_settings">Settings</string>
     <string name="main_start">Start!</string>
-    <string name="settings_game_duration_label">Game dur.</string>
-    <string name="settings_bomb_timer_label">Ticking dur.</string>
-    <string name="settings_sensitivity_label">Sensitivity</string>
+    <string name="settings_game_duration_label">Planting time</string>
+    <string name="settings_bomb_timer_label">Explosion time</string>
+    <string name="settings_sensitivity_label">Code input \nsensitivity</string>
     <string name="settings_save_settings">Save settings</string>
 </resources>
