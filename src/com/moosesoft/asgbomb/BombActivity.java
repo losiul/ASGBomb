@@ -173,7 +173,7 @@ public class BombActivity extends Activity {
 		        	finish();
 		        	dialog.dismiss();
 		        }
-		    });             
+		    });  
 	    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() 
 		    {
 		        public void onClick(DialogInterface dialog, int which) 

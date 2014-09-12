@@ -16,14 +16,15 @@
 
             <TextView
                 android:id="@+id/textView1"
+                style="@style/NonEditableTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-        		android:textColor="@color/green"
                 android:text="@string/settings_game_duration_label" />
 
             <TimePicker
                 android:id="@+id/settings_game_duration_picker"
+                style="@style/EditableTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right" />
@@ -37,14 +38,15 @@
 
             <TextView
                 android:id="@+id/textView3"
+                style="@style/NonEditableTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-        		android:textColor="@color/green"
                 android:text="@string/settings_bomb_timer_label" />
 
             <TimePicker
                 android:id="@+id/settings_bomb_timer_picker"
+                style="@style/EditableTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="right"
@@ -59,14 +61,15 @@
 
             <TextView
                 android:id="@+id/textView2"
+                style="@style/NonEditableTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-        		android:textColor="@color/green"
                 android:text="@string/settings_sensitivity_label" />
 
             <EditText
                 android:id="@+id/settings_sensitivity"
+                style="@style/EditableTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -81,7 +84,7 @@
     <Button
         android:id="@+id/settings_save_settings"
         style="@style/ButtonBarButton"
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/settings_save_settings" />

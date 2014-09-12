@@ -15,32 +15,32 @@
 
     <TextView
         android:id="@+id/bomb_game_status"
+        style="@style/NonEditableTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:keepScreenOn="true"
         android:text=""
-        android:textColor="@color/green"
         android:textSize="50sp"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/textView2"
+        style="@style/NonEditableTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/green"
         android:text="@string/bomb_bomb_status_label" />
 
     <TextView
         android:id="@+id/bomb_bomb_status"
+        style="@style/NonEditableTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
         android:keepScreenOn="true"
         android:text=""
-        android:textColor="@color/green"
         android:textSize="50sp"
         android:textStyle="bold" />
 
