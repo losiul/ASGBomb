@@ -2,7 +2,6 @@ package com.moosesoft.asgbomb;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Vector;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -402,7 +401,7 @@ public class BombActivity extends Activity {
 	
 	
 	private void checkBombCombination(String combination) {
-		BombCodeChecker checker = new BombCodeChecker(preferences.getGameCode());
+		BombCodeChecker checker = new BombCodeChecker(preferences.getGameCode(), preferences.getCodesCount());
 		if(isBombPlanted()) {
 			if(checker.checkDefuseCode(combination)) {
 				bombHasBeenDefused();

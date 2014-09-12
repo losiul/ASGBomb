@@ -45,6 +45,7 @@
         android:layout_height="wrap_content" >
 
 	    <TableRow
+	        android:id = "@+id/main_table_row_1"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content" >
 	
@@ -70,11 +71,11 @@
 	            android:inputType="none" >
 	
 	            <requestFocus />
-	        </EditText>
-	
+	        </EditText>	
 	    </TableRow>
 	
 	    <TableRow
+	        android:id = "@+id/main_table_row_2"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content" >
 	
@@ -100,8 +101,96 @@
 	            android:inputType="none" />
 	
 	    </TableRow>
+		<TableRow
+	        android:id = "@+id/main_table_row_3"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
 	
+	        <TextView
+	            android:id="@+id/textView5"
+	            style="@style/NonEditableTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/main_bomb_code3" />
+	
+	        <EditText
+	            android:id="@+id/main_bomb_code3"
+	            style="@style/NonEditableEditText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:clickable="false"
+	            android:cursorVisible="false"
+	            android:ems="10"
+	            android:focusable="false"
+	            android:focusableInTouchMode="false"
+	            android:inputType="none" >
+	
+	            <requestFocus />
+	        </EditText>	
+	    </TableRow>
 	    <TableRow
+	        android:id = "@+id/main_table_row_4"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:id="@+id/textView6"
+	            style="@style/NonEditableTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/main_bomb_code4" />
+	
+	        <EditText
+	            android:id="@+id/main_bomb_code4"
+	            style="@style/NonEditableEditText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:clickable="false"
+	            android:cursorVisible="false"
+	            android:ems="10"
+	            android:focusable="false"
+	            android:focusableInTouchMode="false"
+	            android:inputType="none" >
+	
+	            <requestFocus />
+	        </EditText>	
+	    </TableRow>
+	    <TableRow
+	        android:id = "@+id/main_table_row_5"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TextView
+	            android:id="@+id/textView7"
+	            style="@style/NonEditableTextView"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_gravity="center_vertical"
+	            android:text="@string/main_bomb_code5" />
+	
+	        <EditText
+	            android:id="@+id/main_bomb_code5"
+	            style="@style/NonEditableEditText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:clickable="false"
+	            android:cursorVisible="false"
+	            android:ems="10"
+	            android:focusable="false"
+	            android:focusableInTouchMode="false"
+	            android:inputType="none" >
+	
+	            <requestFocus />
+	        </EditText>	
+	    </TableRow>
+		
+	    <TableRow
+	        android:id = "@+id/main_table_row_defuse"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content" >
 	
@@ -127,5 +216,6 @@
 	            android:inputType="none" />
 	
 	    </TableRow>
+	    
 	</TableLayout>
 </LinearLayout>

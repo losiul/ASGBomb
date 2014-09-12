@@ -1,94 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#000000"
-    android:orientation="vertical"
-    android:scrollbarStyle="insideOverlay"
-    android:scrollbars="vertical" >
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <TableRow
-            android:id="@+id/tableRow1"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="match_parent"
+	    	android:background="#000000">
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:scrollbarStyle="insideOverlay"
+	    android:scrollbars="vertical" >
+	
+	    <TableLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+	
+	        <TableRow
+	            android:id="@+id/tableRow1"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/textView1"
+	                style="@style/NonEditableTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:text="@string/settings_game_duration_label" />
+	
+	            <TimePicker
+	                android:id="@+id/settings_game_duration_picker"
+	                style="@style/EditableTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical" />
+	
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow3"
+	            android:layout_width="match_parent"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/textView3"
+	                style="@style/NonEditableTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:text="@string/settings_bomb_timer_label" />
+	
+	            <TimePicker
+	                android:id="@+id/settings_bomb_timer_picker"
+	                style="@style/EditableTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical" />
+	
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow2"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/textView2"
+	                style="@style/NonEditableTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:text="@string/settings_sensitivity_label" />
+	
+	            <EditText
+	                android:id="@+id/settings_sensitivity"
+	                style="@style/EditableTextView"
+	                android:layout_width="match_parent"
+	                android:layout_height="wrap_content"
+	                android:layout_gravity="center_vertical"
+	                android:ems="10"
+	                android:inputType="number" />
+	
+	        </TableRow>
+	
+	        <TableRow
+	            android:id="@+id/tableRow4"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content" >
+	
+	            <TextView
+	                android:id="@+id/textView4"
+	                style="@style/NonEditableTextView"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/settings_bombsites_count_label" />
+	
+	            <LinearLayout
+	                android:layout_width="wrap_content"
+	                android:layout_height="match_parent" >
 
-            <TextView
-                android:id="@+id/textView1"
-                style="@style/NonEditableTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/settings_game_duration_label" />
+					<TextView
+					    android:id="@+id/settings_bombsites_count_value"
+					    style="@style/NonEditableEditText"
+					    android:layout_width="30dp"
+					    android:layout_height="match_parent"
+					    android:layout_gravity="center_vertical"
+					    android:text="" />
 
-            <TimePicker
-                android:id="@+id/settings_game_duration_picker"
-                style="@style/EditableTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right" />
+		            <SeekBar
+		                android:id="@+id/settings_bombsites_count_seekbar"
+		                android:layout_width="match_parent"
+		                android:layout_height="wrap_content"
+		                android:layout_gravity="center_vertical" />
 
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/textView3"
-                style="@style/NonEditableTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/settings_bomb_timer_label" />
-
-            <TimePicker
-                android:id="@+id/settings_bomb_timer_picker"
-                style="@style/EditableTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                 />
-
-        </TableRow>
-
-        <TableRow
-            android:id="@+id/tableRow2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <TextView
-                android:id="@+id/textView2"
-                style="@style/NonEditableTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:text="@string/settings_sensitivity_label" />
-
-            <EditText
-                android:id="@+id/settings_sensitivity"
-                style="@style/EditableTextView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="number" >
-
-                <requestFocus />
-            </EditText>
-
-        </TableRow>
-    </TableLayout>
-
-    <Button
-        android:id="@+id/settings_save_settings"
-        style="@style/ButtonBarButton"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/settings_save_settings" />
-
-</LinearLayout>
+	            </LinearLayout>
+	
+	        </TableRow>
+	
+	    </TableLayout>
+		<LinearLayout
+		       android:layout_width="wrap_content"
+		       android:layout_height="wrap_content"
+		       android:layout_gravity="bottom"
+		       android:orientation="vertical" >	
+			<View
+			    android:layout_width="wrap_content"
+			    android:layout_height="0dp"
+			    android:layout_weight="1" />
+		
+		   <Button
+		       android:id="@+id/settings_save_settings"
+		       style="@style/ButtonBarButton"
+		       android:layout_width="fill_parent"
+		       android:layout_height="wrap_content"
+		       android:layout_gravity="center"
+		       android:text="@string/settings_save_settings" />
+		  </LinearLayout>
+		
+	</LinearLayout>
+</ScrollView>

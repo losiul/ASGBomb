@@ -7,17 +7,15 @@ import java.security.NoSuchAlgorithmException;
 public class BombCodeChecker {
 	
 	private String gameCode;
+	private int codesCount;
 	
-	public BombCodeChecker(String gameCode) {
+	public BombCodeChecker(String gameCode, int codesCount) {
 		this.gameCode = gameCode;
+		this.codesCount = codesCount;
 	}
 	
-	public String getBombCode1() {
-		return calculateCode(gameCode + "code_1");
-	}
-	
-	public String getBombCode2() {
-		return calculateCode(gameCode + "code_2");
+	public String getBombCode(int codeNumber) {
+		return calculateCode(gameCode + "code_" + (codeNumber + 1));
 	}
 	
 	public String getDefuseCode() {
@@ -25,7 +23,10 @@ public class BombCodeChecker {
 	}
 	
 	public boolean checkBombCode(String codeToCheck) {
-		return codeToCheck.equals(getBombCode1()) || codeToCheck.equals(getBombCode2()); 
+		for(int i = 0; i < codesCount; ++i)
+			if(!codeToCheck.equals(getBombCode(i)))
+				return false;
+		return true;
 	}
 	
 	public boolean checkDefuseCode(String codeToCheck) {

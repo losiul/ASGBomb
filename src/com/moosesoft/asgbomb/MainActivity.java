@@ -2,18 +2,22 @@ package com.moosesoft.asgbomb;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.opengl.Visibility;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TableRow;
 
 public class MainActivity extends Activity {
 
+	private static int MAX_BOMB_SITES = 5;
+	
 	private EditText gameCodeText;
-	private EditText bombCode1Text;
-	private EditText bombCode2Text;
+	private EditText[] bombCodeTexts;
+	private TableRow[] bombCodeRows;
 	private EditText bombDefuseText;
 	private ASGBombPreferences preferences;
 	
@@ -21,13 +25,6 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-//		String gameCode = "gra";
-//		for(int i = 0; i < 20; ++i) {
-//			String currentGameCode = gameCode + (i + 1);
-//			BombCodeChecker checker = new BombCodeChecker(currentGameCode);
-//			Log.d("Main", "Kod gry:\t" + currentGameCode + " BS1:\t" + checker.getBombCode1() + 
-//					" BS2:\t" + checker.getBombCode2() + " Def:\t" + checker.getDefuseCode());
-//		}
 
 		setContentView(R.layout.activity_main);
 		
@@ -48,8 +45,21 @@ public class MainActivity extends Activity {
 		});
 		
 		this.preferences = new ASGBombPreferences(this);
-		this.bombCode1Text = (EditText)findViewById(R.id.main_bomb_code1);
-		this.bombCode2Text = (EditText)findViewById(R.id.main_bomb_code2);
+		this.preferences.createDefaultSettingsIfNecessary();
+		
+		this.bombCodeTexts = new EditText[MAX_BOMB_SITES];
+		this.bombCodeTexts[0] = (EditText)findViewById(R.id.main_bomb_code1);
+		this.bombCodeTexts[1] = (EditText)findViewById(R.id.main_bomb_code2);
+		this.bombCodeTexts[2] = (EditText)findViewById(R.id.main_bomb_code3);
+		this.bombCodeTexts[3] = (EditText)findViewById(R.id.main_bomb_code4);
+		this.bombCodeTexts[4] = (EditText)findViewById(R.id.main_bomb_code5);
+		this.bombCodeRows = new TableRow[MAX_BOMB_SITES];
+		this.bombCodeRows[0] = (TableRow)findViewById(R.id.main_table_row_1);
+		this.bombCodeRows[1] = (TableRow)findViewById(R.id.main_table_row_2);
+		this.bombCodeRows[2] = (TableRow)findViewById(R.id.main_table_row_3);
+		this.bombCodeRows[3] = (TableRow)findViewById(R.id.main_table_row_4);
+		this.bombCodeRows[4] = (TableRow)findViewById(R.id.main_table_row_5);
+		
 		this.bombDefuseText = (EditText)findViewById(R.id.main_defuse_code);
 		this.gameCodeText = (EditText)findViewById(R.id.main_game_code);
 		this.gameCodeText.addTextChangedListener(new TextWatcher() {
@@ -66,24 +76,43 @@ public class MainActivity extends Activity {
 			@Override
 			public void afterTextChanged(Editable s) {
 				String gameCode = s.toString();
-				BombCodeChecker checker = new BombCodeChecker(gameCode);
-				bombCode1Text.setText(checker.getBombCode1());
-				bombCode2Text.setText(checker.getBombCode2());
+				BombCodeChecker checker = new BombCodeChecker(gameCode, preferences.getCodesCount());
+				for(int i = 0; i < preferences.getCodesCount(); ++i)
+					bombCodeTexts[i].setText(checker.getBombCode(i));
 				bombDefuseText.setText(checker.getDefuseCode());
 				preferences.setGameCode(gameCode);
 			}
-		});
-		this.gameCodeText.setText(preferences.getGameCode());
-				
-		ASGBombPreferences preferences = new ASGBombPreferences(this);
-		preferences.createDefaultSettingsIfNecessary();
+		});		
+
+		String gameCode = "gra ";
+		for(int i = 0; i < 20; ++i) {
+			String currentGameCode = gameCode + (i + 1);
+			BombCodeChecker checker = new BombCodeChecker(currentGameCode, preferences.getCodesCount());
+			String codes = "";
+			for(int j = 0; j < preferences.getCodesCount(); ++j)
+				codes += "Bombsite " + (j + 1) + ":\t" + checker.getBombCode(j) + "\t";
+			Log.d("Main", "Nazwa gry:\t" + currentGameCode + codes + "Defuse:\t" + checker.getDefuseCode());
+		}
+		
 		//debug code:
 		//preferences.updateSettings(60*1000, 15*1000, 0.01f);
 	}
 	
 	@Override
-	protected void onStop() {
-		super.onStop();
+	protected void onResume() {
+		super.onResume();
+		for(int i = 0; i < preferences.getCodesCount(); ++i) {
+			bombCodeRows[i].setVisibility(View.VISIBLE);
+		}
+		for(int i = preferences.getCodesCount(); i < MAX_BOMB_SITES; ++i) {
+			bombCodeRows[i].setVisibility(View.GONE);			
+		}
+		this.gameCodeText.setText(preferences.getGameCode());
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
 		preferences.setGameCode(gameCodeText.getText().toString());		
 	}
 
