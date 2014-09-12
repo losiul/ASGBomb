@@ -6,10 +6,10 @@
     <string name="bomb_game_status_label">Game time left:</string>
     <string name="bomb_bomb_status_label">Time to detonation:</string>
     <string name="bomb_content">ASG Bomb</string>
-    <string name="main_game_code">Next Game Code:</string>
+    <string name="main_game_code">Game Name:</string>
     <string name="main_bomb_code1">Bomb site 1 Code:</string>
     <string name="main_bomb_code2">Bomb site 2 Code:</string>
-    <string name="main_defuse_code">Defuse code:</string>
+    <string name="main_defuse_code">Defuse Code:</string>
     <string name="main_settings">Settings</string>
     <string name="main_start">Start!</string>
     <string name="settings_game_duration_label">Game dur.</string>
