@@ -84,18 +84,18 @@ public class MainActivity extends Activity {
 			}
 		});		
 
-		String gameCode = "gra ";
-		for(int i = 0; i < 20; ++i) {
-			String currentGameCode = gameCode + (i + 1);
-			BombCodeChecker checker = new BombCodeChecker(currentGameCode, preferences.getCodesCount());
-			String codes = "";
-			for(int j = 0; j < preferences.getCodesCount(); ++j)
-				codes += "Bombsite " + (j + 1) + ":\t" + checker.getBombCode(j) + "\t";
-			Log.d("Main", "Nazwa gry:\t" + currentGameCode + codes + "Defuse:\t" + checker.getDefuseCode());
-		}
+//		String gameCode = "gra ";
+//		for(int i = 0; i < 20; ++i) {
+//			String currentGameCode = gameCode + (i + 1);
+//			BombCodeChecker checker = new BombCodeChecker(currentGameCode, preferences.getCodesCount());
+//			String codes = "";
+//			for(int j = 0; j < preferences.getCodesCount(); ++j)
+//				codes += "Bombsite " + (j + 1) + ":\t" + checker.getBombCode(j) + "\t";
+//			Log.d("Main", "Nazwa gry:\t" + currentGameCode + codes + "Defuse:\t" + checker.getDefuseCode());
+//		}
 		
 		//debug code:
-		//preferences.updateSettings(60*1000, 15*1000, 0.01f);
+		//preferences.updateSettings(60*1000, 15*1000, 0.8f, 2);
 	}
 	
 	@Override

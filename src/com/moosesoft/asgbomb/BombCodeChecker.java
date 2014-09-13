@@ -24,9 +24,9 @@ public class BombCodeChecker {
 	
 	public boolean checkBombCode(String codeToCheck) {
 		for(int i = 0; i < codesCount; ++i)
-			if(!codeToCheck.equals(getBombCode(i)))
-				return false;
-		return true;
+			if(codeToCheck.equals(getBombCode(i)))
+				return true;
+		return false;
 	}
 	
 	public boolean checkDefuseCode(String codeToCheck) {
