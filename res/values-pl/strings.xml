@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ASG Bomb</string>    
+    
+    <string name="bomb_button_game_start">Rozpocznij grę</string>
+    <string name="bomb_button_bomb_plant">Uzbrój bombę!</string>
+    <string name="bomb_button_bomb_defuse">Rozbrój bombę!</string>
+    <string name="bomb_button_game_end">Zakończ grę</string>
+    <string name="bomb_end_game_confirm_dialog_title">Zakończyć grę?</string>
+    <string name="bomb_end_game_confirm_dialog_content">Czy jesteś pewien, że chcesz zakończyć grę przed czasem?</string>
+    <string name="bomb_end_game_confirm_dialog_yes">Tak</string>
+    <string name="bomb_end_game_confirm_dialog_cancel">Anuluj</string>
+    <string name="bomb_game_status_label">Pozostały czas gry:</string>
+    <string name="bomb_bomb_status_label">Czas do detonacji:</string>
+    <string name="bomb_bomb_status_label_detonated">Zdetonowana!</string>
+    <string name="bomb_bomb_status_label_defused">Rozbrojona!</string>
+    <string name="bomb_content">ASG Bomb</string>
+    <string name="bomb_terrorist_win">Zwyciężyli terroryści!</string>
+    <string name="bomb_counter_terrorist_win">Zwyciężyli antyterroryści!</string>    
+    <string name="main_game_code">Nazwa gry:</string>
+    <string name="main_bomb_code1">Kod bomb site 1:</string>
+    <string name="main_bomb_code2">Kod bomb site 2:</string>
+    <string name="main_bomb_code3">Kod bomb site 3:</string>
+    <string name="main_bomb_code4">Kod bomb site 4:</string>
+    <string name="main_bomb_code5">Kod bomb site 5:</string>
+    <string name="main_defuse_code">Kod rozbrojenia:</string>
+    <string name="main_settings">Ustawienia</string>
+    <string name="main_start">Start!</string>
+    <string name="settings_bomb_timer_label">Czas do\neksplozji</string>
+    <string name="settings_bombsites_count_label">Liczba\nBombsite\'ów</string>
+    <string name="settings_game_duration_label">Czas na\npodłożenie</string>
+    <string name="settings_sensitivity_label">Czułość wprow-\nadzania kodu</string>
+    <string name="settings_save_settings">Zapisz ustawienia</string>
+</resources>
+

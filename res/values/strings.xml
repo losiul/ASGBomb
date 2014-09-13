@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">ASG Bomb</string>
-    <string name="bomb_button_bomb_set">Defuse!</string>
+    <string name="bomb_button_game_start">Start game</string>
+    <string name="bomb_button_bomb_plant">Plant bomb!</string>
+    <string name="bomb_button_bomb_defuse">Defuse!</string>
     <string name="bomb_button_game_end">End game</string>
+    <string name="bomb_end_game_confirm_dialog_title">End game?</string>
+    <string name="bomb_end_game_confirm_dialog_content">Are you sure you want to end game now?</string>
+    <string name="bomb_end_game_confirm_dialog_yes">Yes</string>
+    <string name="bomb_end_game_confirm_dialog_cancel">Cancel</string>
     <string name="bomb_game_status_label">Game time left:</string>
     <string name="bomb_bomb_status_label">Time to detonation:</string>
+    <string name="bomb_bomb_status_label_detonated">Detonated!</string>
+    <string name="bomb_bomb_status_label_defused">Defused!</string>
     <string name="bomb_content">ASG Bomb</string>
+    <string name="bomb_terrorist_win">Terrorists win!</string>
+    <string name="bomb_counter_terrorist_win">Counter terrorists win!</string>
     <string name="main_game_code">Game Name:</string>
     <string name="main_bomb_code1">Bomb site 1 Code:</string>
     <string name="main_bomb_code2">Bomb site 2 Code:</string>

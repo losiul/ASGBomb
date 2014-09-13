@@ -67,7 +67,7 @@
 		    style="@style/ButtonBarButton"
 		    android:layout_width="match_parent"
 		    android:layout_height="wrap_content"
-		    android:text="@string/bomb_button_bomb_set" />
+		    android:text="@string/bomb_button_game_start" />
 
     </LinearLayout>
 

@@ -94,8 +94,8 @@ public class BombActivity extends Activity {
 										keyboardStartPosition[1]*event.values[1] + 
 										keyboardStartPosition[2]*event.values[2];
 						angle /= keyboardStartPositionLength * currentLen;
-						Log.d("Bomb", "Acc pos: " + event.values[0] + "; "+ event.values[1] + "; " + event.values[2]);
-						Log.d("Bomb", "Acc angle: " + angle + " lenStart: " + keyboardStartPositionLength + " lenCur: " + currentLen);
+						//Log.d("Bomb", "Acc pos: " + event.values[0] + "; "+ event.values[1] + "; " + event.values[2]);
+						//Log.d("Bomb", "Acc angle: " + angle + " lenStart: " + keyboardStartPositionLength + " lenCur: " + currentLen);
 						
 						if(1.0f - angle > sensitivity) {
 							closeKeyboardDialog();
@@ -136,7 +136,7 @@ public class BombActivity extends Activity {
 		}
 		
 		this.plantDefuseButton = (Button)findViewById(R.id.bomb_button_bomb_set_defuse);
-		this.plantDefuseButton.setText("Start game!");
+		this.plantDefuseButton.setText(R.string.bomb_button_game_start);
 		this.plantDefuseButton.setOnClickListener(new OnClickListener() {
 			
 			@Override
@@ -158,10 +158,10 @@ public class BombActivity extends Activity {
 	private void showShouldEndGameDialog() {
 		AlertDialog.Builder builder = new AlertDialog.Builder(BombActivity.this);
 	    builder
-		    .setTitle("End game")
-		    .setMessage("Are you sure you want to end game now?")
+		    .setTitle(R.string.bomb_end_game_confirm_dialog_title)
+		    .setMessage(R.string.bomb_end_game_confirm_dialog_content)
 		    .setIcon(android.R.drawable.ic_dialog_alert)
-		    .setPositiveButton("Yes", new DialogInterface.OnClickListener() 
+		    .setPositiveButton(R.string.bomb_end_game_confirm_dialog_yes, new DialogInterface.OnClickListener() 
 		    {
 		        public void onClick(DialogInterface dialog, int which) 
 		        {
@@ -173,7 +173,7 @@ public class BombActivity extends Activity {
 		        	dialog.dismiss();
 		        }
 		    });  
-	    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() 
+	    builder.setNegativeButton(R.string.bomb_end_game_confirm_dialog_cancel, new DialogInterface.OnClickListener() 
 		    {
 		        public void onClick(DialogInterface dialog, int which) 
 		        {   
@@ -186,7 +186,7 @@ public class BombActivity extends Activity {
 
 	private void startGame() {
 		gameFinished = false;
-		plantDefuseButton.setText("Plant bomb");
+		plantDefuseButton.setText(R.string.bomb_button_bomb_plant);
 		bombStatus.setText("");
 		gameStartTime = System.currentTimeMillis();
 		timerThread = new Thread() {
@@ -300,7 +300,6 @@ public class BombActivity extends Activity {
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		Log.d("Bomb", "OnDestroy");
 		gameStartTime = 0;
 		bombPlantedTime = 0;
 		if(timerThread != null)
@@ -422,7 +421,7 @@ public class BombActivity extends Activity {
 
 	
 	private void bombHasBeenPlanted() {
-		plantDefuseButton.setText("Defuse bomb");
+		plantDefuseButton.setText(R.string.bomb_button_bomb_defuse);
 		bombPlantedTime = System.currentTimeMillis();
 		gameStartTime = 0;
     	playSound("planted.mp3");
@@ -431,12 +430,12 @@ public class BombActivity extends Activity {
 	
 	private void bombHasBeenDefused() {
 
-		plantDefuseButton.setText("Start game");
+		plantDefuseButton.setText(R.string.bomb_button_game_start);
 		bombPlantedTime = 0;
 		gameStartTime = 0;
     	gameFinished = true;
-    	gameStatus.setText("Counter terrorists win!");
-    	bombStatus.setText("Defused!");
+    	gameStatus.setText(R.string.bomb_counter_terrorist_win);
+    	bombStatus.setText(R.string.bomb_bomb_status_label_defused);
     	
     	playSound("defused.mp3");
     	cancelVibration();
@@ -459,7 +458,7 @@ public class BombActivity extends Activity {
 	}
 	
 	private void bombExplodes() {
-		plantDefuseButton.setText("Start game");
+		plantDefuseButton.setText(R.string.bomb_button_game_start);
     	playSound("explosion.mp3");
     	cancelVibration();
     	Thread thread = new Thread() {
@@ -479,19 +478,19 @@ public class BombActivity extends Activity {
     	};
     	thread.start();
     	
-    	gameStatus.setText("Terrorists win!");
+    	gameStatus.setText(R.string.bomb_terrorist_win);
     	bombPlantedTime = 0;
     	gameFinished = true;
-    	bombStatus.setText("Detonated!");		
+    	bombStatus.setText(R.string.bomb_bomb_status_label_detonated); 		
 	}
 	
 	private void gameTimeEnd() {
-		plantDefuseButton.setText("Start game");
+		plantDefuseButton.setText(R.string.bomb_button_game_start);
     	playSound("counters_win.mp3");
     	cancelVibration();
     	gameStartTime = 0;
     	gameFinished = true;
-    	gameStatus.setText("Counter terrorists win!");
+    	gameStatus.setText(R.string.bomb_counter_terrorist_win);
     	closeKeyboardDialog();
 	}
 	

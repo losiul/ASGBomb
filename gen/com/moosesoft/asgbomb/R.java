@@ -1293,25 +1293,35 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int app_name=0x7f0a000d;
-        public static final int bomb_bomb_status_label=0x7f0a0011;
-        public static final int bomb_button_bomb_set=0x7f0a000e;
-        public static final int bomb_button_game_end=0x7f0a000f;
-        public static final int bomb_content=0x7f0a0012;
-        public static final int bomb_game_status_label=0x7f0a0010;
-        public static final int main_bomb_code1=0x7f0a0014;
-        public static final int main_bomb_code2=0x7f0a0015;
-        public static final int main_bomb_code3=0x7f0a0016;
-        public static final int main_bomb_code4=0x7f0a0017;
-        public static final int main_bomb_code5=0x7f0a0018;
-        public static final int main_defuse_code=0x7f0a0019;
-        public static final int main_game_code=0x7f0a0013;
-        public static final int main_settings=0x7f0a001a;
-        public static final int main_start=0x7f0a001b;
-        public static final int settings_bomb_timer_label=0x7f0a001c;
-        public static final int settings_bombsites_count_label=0x7f0a001d;
-        public static final int settings_game_duration_label=0x7f0a001e;
-        public static final int settings_save_settings=0x7f0a0020;
-        public static final int settings_sensitivity_label=0x7f0a001f;
+        public static final int bomb_bomb_status_label=0x7f0a0017;
+        public static final int bomb_bomb_status_label_defused=0x7f0a0019;
+        public static final int bomb_bomb_status_label_detonated=0x7f0a0018;
+        public static final int bomb_button_bomb_defuse=0x7f0a0010;
+        public static final int bomb_button_bomb_plant=0x7f0a000f;
+        public static final int bomb_button_game_end=0x7f0a0011;
+        public static final int bomb_button_game_start=0x7f0a000e;
+        public static final int bomb_content=0x7f0a001a;
+        public static final int bomb_counter_terrorist_win=0x7f0a001c;
+        public static final int bomb_end_game_confirm_dialog_cancel=0x7f0a0015;
+        public static final int bomb_end_game_confirm_dialog_content=0x7f0a0013;
+        public static final int bomb_end_game_confirm_dialog_title=0x7f0a0012;
+        public static final int bomb_end_game_confirm_dialog_yes=0x7f0a0014;
+        public static final int bomb_game_status_label=0x7f0a0016;
+        public static final int bomb_terrorist_win=0x7f0a001b;
+        public static final int main_bomb_code1=0x7f0a001e;
+        public static final int main_bomb_code2=0x7f0a001f;
+        public static final int main_bomb_code3=0x7f0a0020;
+        public static final int main_bomb_code4=0x7f0a0021;
+        public static final int main_bomb_code5=0x7f0a0022;
+        public static final int main_defuse_code=0x7f0a0023;
+        public static final int main_game_code=0x7f0a001d;
+        public static final int main_settings=0x7f0a0024;
+        public static final int main_start=0x7f0a0025;
+        public static final int settings_bomb_timer_label=0x7f0a0026;
+        public static final int settings_bombsites_count_label=0x7f0a0027;
+        public static final int settings_game_duration_label=0x7f0a0028;
+        public static final int settings_save_settings=0x7f0a002a;
+        public static final int settings_sensitivity_label=0x7f0a0029;
     }
     public static final class style {
         /** 
